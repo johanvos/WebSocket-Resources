@@ -72,6 +72,12 @@ public class HelloServerTest {
     assertEquals(401, badResponse.getStatus());
     assertFalse(badResponse.getBody().isPresent());
 
+    long                     unexRequest  = client.sendRequest("GET", "/hello/unexisting");
+    WebSocketResponseMessage unexResponse = client.readResponse(unexRequest, 5000);
+
+    assertEquals(404, unexResponse.getStatus());
+    assertFalse(unexResponse.getBody().isPresent());
+
     long                     optionalRequest  = client.sendRequest("GET", "/hello/optional");
     WebSocketResponseMessage optionalResponse = client.readResponse(optionalRequest, 5000);
 
