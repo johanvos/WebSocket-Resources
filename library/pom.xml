@@ -10,7 +10,7 @@
 
     <groupId>org.whispersystems</groupId>
     <artifactId>websocket-resources</artifactId>
-    <version>0.5.10</version>
+    <version>0.5.10-gluon</version>
 
     <name>WebSocket-Resources</name>
     <description>A Dropwizard library that lets you use Jersey-style Resources over WebSockets</description>
@@ -65,7 +65,8 @@
         <dependency>
             <groupId>org.eclipse.jetty.websocket</groupId>
             <artifactId>websocket-server</artifactId>
-            <version>9.4.14.v20181114</version>
+            <!-- <version>9.4.14.v20181114</version> -->
+            <version>9.4.22.v20191022</version>
         </dependency>
 
         <dependency>
@@ -122,6 +123,7 @@
                     </archive>
                 </configuration>
             </plugin>
+<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
@@ -138,6 +140,7 @@
                     </execution>
                 </executions>
             </plugin>
+-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
